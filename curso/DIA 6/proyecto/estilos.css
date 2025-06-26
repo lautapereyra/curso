@@ -1,0 +1,64 @@
+ body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        padding: 20px;
+        max-width: 600px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        background: white;
+        margin-top: 100px;
+
+    }
+
+    h1 {
+        text-align: center;
+        color: #005f99;
+    }
+
+    .estudiante {
+        text-align: center;
+        margin: 20px 0;
+        background-color: #e0f7fa;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    ul li {
+        background: #f0f0f0;
+        margin: 5px 0;
+        padding: 8px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .info h4 {
+        margin: 15px 0 5px;
+        font-size: 1rem;
+    }
+
+    button {
+        margin-bottom: 15px;
+        padding: 8px 12px;
+        border: none;
+        background-color: #007acc;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #005f99;
+    }
+
+    span {
+        font-weight: bold;
+        color: #2e7d32;}
+        

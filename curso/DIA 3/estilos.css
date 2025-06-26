@@ -1,0 +1,9 @@
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 750%;
+    object-fit: contain;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 400px;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+    <h1>Lista de productos</h1>
+    <ol>
+        <li>Manzana</li>
+        <li>Naranja</li>
+        <li>Banana</li>
+        <li>Pera</li>
+        <li>Sandia</li>
+    </ol>
+
+    <input type="number" id="inputNumero" min="1" max="5">
+    <button onclick="cargarPrecio()">consultar precio</button>
+
+    <h3 id="textoPrecio">---</h3>
+
+</body>
+<script>
+    function cargarPrecio() {
+        let elementoFruta = document.getElementById("inputNumero");
+        let elementoRespuesta = document.getElementById("textoPrecio");
+        let fruta = elementoFruta.value;
+
+        switch (fruta) {
+            case "1":
+                elementoRespuesta.textContent = "$1500"
+                break;
+            case "2":
+                elementoRespuesta.textContent = "$1250"
+                break;
+            case "3":
+                elementoRespuesta.textContent = "$1700"
+                break;
+            case "4":
+                elementoRespuesta.textContent = "$900"
+                break;
+            case "5":
+                elementoRespuesta.textContent = "$1499"
+                break;
+        }
+    }
+</script>
+
+</html>

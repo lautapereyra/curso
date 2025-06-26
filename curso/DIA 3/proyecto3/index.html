@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego Boca!</title>
+    <link rel="stylesheet" href="proyectoTres.css">
+
+    <!-- Tipografías optimizadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;700&family=Lora:ital,wght@0,400;1,400&family=Work+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body onload="comenzarTiempo()">
+    <!-- Capa oscura sobre la imagen de fondo -->
+    <div class="overlay"></div>
+
+    <!-- Contenido principal -->
+    <div class="contenedor">
+        <h1>JUEGO DE PREGUNTAS DE BOCA</h1>
+        <h2>TIEMPO RESTANTE</h2>
+        <h3 id="textoAlarma">00</h3>
+        <audio id="audioAlarma">
+            <source src="C:\Users\claud\Desktop\curso\DIA 3\alarma.mp3" type="audio/mpeg">
+            sonido no habilitado
+        </audio>
+
+        <p>¿En qué grupo quedó Boca Juniors en el Mundial de Clubes?</p>
+        <input class="cajaTexto" type="text" id="respuesta1" placeholder="Ingrese su respuesta...">
+
+        <p>¿Contra quién debuta Boca Juniors en el Mundial de Clubes 2025?</p>
+        <input class="cajaTexto" type="text" id="respuesta2" placeholder="Ingrese su respuesta...">
+
+        <p>¿Qué entrenador dirige Boca en este torneo?</p>
+        <input class="cajaTexto" type="text" id="respuesta3" placeholder="Ingrese su respuesta...">
+
+        <p>¿Dónde será el primer partido de Boca en el Mundial de Clubes?</p>
+        <input class="cajaTexto" type="text" id="respuesta4" placeholder="Ingrese su respuesta...">
+
+        <p>¿Contra quién juega Boca Juniors el último partido de la fase de grupos?</p>
+        <input class="cajaTexto" type="text" id="respuesta5" placeholder="Ingrese su respuesta...">
+
+        <div class="botones">
+            <button onclick="volverAIntentar()">Recargar</button>
+            <button onclick=finalizado()>Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        let tiempoTerminado;
+        let intervaloDeTiempo;
+        function comenzarTiempo(){
+            tiempoTerminado=setTimeout(tiempoCumplido, 30000);
+            intervaloDeTiempo=setInterval(ticktack, 1000);
+            document.getElementById("textoAlarma").textContent=30;
+        }
+
+        function ticktack(){
+            let tiempo=document.getElementById("textoAlarma").textContent;
+            document.getElementById("textoAlarma").textContent= tiempo-1 ;
+        }
+
+        function tiempoCumplido(){
+            clearInterval(intervaloDeTiempo);
+            document.getElementById("textoAlarma").textContent=0;
+            document.getElementById("audioAlarma").play();
+            alert("Tiempo Cumplido")
+        }
+
+        function finalizado(){
+            clearTimeout(tiempoTerminado);
+            clearInterval(intervaloDeTiempo);
+
+            let fecha=new Date();
+            let respuesta1=document.getElementById("respuesta1").value;
+            let respuesta2=document.getElementById("respuesta2").value;
+            let respuesta3=document.getElementById("respuesta3").value;
+            let respuesta4=document.getElementById("respuesta4").value;
+            let respuesta5=document.getElementById("respuesta5").value;
+
+            let mensaje=fecha.toLocaleDateString("es-Es") + "\n" +
+            "1. " + respuesta1 + "\n" + 
+            "2. " + respuesta2 + "\n" + 
+            "3. " + respuesta3 + "\n" + 
+            "4. " + respuesta4 + "\n" + 
+            "5. " + respuesta5;
+
+            alert(mensaje);
+        }
+
+        function volverAIntentar(){
+            location.reload();
+        }
+    </script>
+</body>
+
+</html>

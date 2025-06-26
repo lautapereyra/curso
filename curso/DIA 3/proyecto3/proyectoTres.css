@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url(./renato-m-chugo-CcnM4y7u6uU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Oscurece el fondo */
+    z-index: 1;
+}
+
+/* Contenedor que alinea los elementos verticalmente */
+.contenedor {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Encabezados */
+h1,
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 550;
+    font-style: bold;
+    margin: 0;
+    font-size: 300%;
+}
+h3{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 550;
+    font-style: bold;
+    margin: 0;
+    font-size: 500%;
+}
+
+/* Estilo para los párrafos */
+p {
+    font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:normal;
+  font-style: normal;
+}
+
+/* Inputs con ancho y márgenes adecuados */
+.cajaTexto {
+    width: 90%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 50px;
+    border:1px;
+}
+input::placeholder {
+    text-align: center;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Por si se achica la pantalla */
+    margin-top: 20px;
+}
+
+button {
+    width: auto; /* o un ancho fijo, o max-width si querés limitar */
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 50px;
+    border: 1px solid black;
+    cursor: pointer;
+    min-width: 120px; /* opcional, para que no sean muy chicos */
+}

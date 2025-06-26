@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+    <head>
+        <title>Ingresos de usuario 1</title>
+    </head>
+    <body>
+
+        <input type="text" id="inputNombre" placeholder="Nombre">
+        <input type="text" id="inputEdad" placeholder="Edad">
+        <button onclick="mostrarTexto()">Boton</button>
+        
+        
+        <script>
+            function mostrarTexto(){
+                let miNombre = document.getElementById("inputNombre")
+                let miEdad = document.getElementById("inputEdad")
+                alert("Hola, soy " + miNombre.value + " y tengo " + miEdad.value + " años!")
+            }
+        </script>
+    </body>
+</html>

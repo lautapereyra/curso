@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js" defer></script>
+</head>
+<body>
+    <h1>Calculadora Online</h1>
+
+    <input type="text" placeholder="ingrese el cálculo..." id="input1">
+    <input type="text" placeholder="ingrese el cálculo..." id="input2">
+    <br>
+    <div>
+        <button onclick="suma()">+</button>
+        <button onclick="resta()">-</button>
+        <button onclick="multiplicar()">x</button>
+        <button onclick="dividir()">/</button>
+    </div>
+    <div>
+        <button onclick="potencia()">potencia</button>
+        <button onclick="raiz()">raíz cuadrada</button>
+        <button onclick="absoluto()">absoluto</button>
+        <button onclick="random()">random</button>
+    </div>
+
+    <h3>Resultado:</h3>
+    <input type="text" placeholder="resultado..." id="spanResultado">
+</body>
+</html>
